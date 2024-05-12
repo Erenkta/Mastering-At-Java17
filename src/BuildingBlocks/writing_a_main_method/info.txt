@@ -1,0 +1,27 @@
+
+--- main() method ---
+
+bir Zoo sınıfı oluşturalım ve daha sonra bunu Javac ile derleyip çalıştıralım
+1-Sınıfı oluşturduk
+2-Terminalde Zoo class'ının bulunduğu dosyaya git
+3-Öncelikle javac Zoo.java yaz => sana Zoo.class'ı versin ( Java dosyasının bytecode hali)
+4-Son olarak da java Zoo.java diyerek o bytecode'u çalıştır.
+
+Bir class'ın programın giriş noktası olabilmesi için geçerli bir main() methodu bulunmalıdır.
+
+static anahtar kelimesi = method ile kendi class'ını bind eder.
+yani biz bir methodu obje oluşturmadan çağırabiliriz
+
+ayrıca main methodu 3 farklı şekilde variable alabilir :
+String[] args
+String options[]
+String... friends --> varargs olarak da bilinir.
+
+Java Zoo.java eren nokta
+dersek bu iki tane string args'a kaydedilir ve istersek args[0] ya da args[1] diyerek
+erişebiliriz.
+eğer boşluklu bir String yollamak istersek de "eren nokta" şeklinde yollarız
+
+!! Derleme ile alakalı olarak eğer önce Javac Zoo.java daha sonra Java Zoo yapmak istemiyorsak
+direkt Java Zoo.java yazıp önce derleyip sonra çalıştırma işlemini tek seferde halletmiş oluruz
+- buna single file source code özelliği denir

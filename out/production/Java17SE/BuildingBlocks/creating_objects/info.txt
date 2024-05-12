@@ -1,0 +1,14 @@
+bir classtan instance oluşturmak için
+Park park = new Park() şeklinde bir tanım bize yeter
+
+!! Code blockslar yani "{}" methodun dışında olursa bunlara instance initializer ismini veriyoruz
+Bird class'ında bunu kullanıp görelim
+
+code blockslar => class definition , method declaration,
+inner block ve instance initializer olarak kullanılabilir
+
+Kodumuz birden fazla yerde initialize edilebilir ve biz bunun takbini yapmalıyız
+1.kural = field ve instance initializer sıraya göre çalıştırılır.
+2.kural = Constructor bu ikisinden sonra çalışır
+
+*Chick class'ında örneği mevcut*

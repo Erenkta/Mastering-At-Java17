@@ -1,0 +1,87 @@
+--- Understanding package and imports ---
+
+Classları ve hazır paketleri kullanmak için import etmek şarttır.
+
+java.util.List => List class'ını import ettik
+java.util.* => ilgili pakette yer alan bütün sınıflar import edilir
+
+şimdi şöyle bir örnek yapalım
+Java.util içerisinde => ArrayList.java ve concurrent paketi olsun
+ben java.util.* dersem bu sadece util altındaki tüm java classlarını import eder
+yani concurrent altındaki herhangi bir class'ı import etmez
+
+! Javada Java.lang paketi otomatik olarak import edilir
+!! java.util.*.* gibi bir kullanım söz konusu değildir
+* yani wildcard sadece sonda kullanılır
+
+--- Conflict ---
+
+java.util ve java.sql altında 2 tane Date class'ı mevcuttur
+import java.util.*
+import java.sql.*
+şeklinde ya da
+import
+import java.util.Date
+import java.sql.Date
+şeklinde importlar ile
+Date date = new Date() yaparsak bu conflicte sebep olur hata verir ( compile time error )
+
+! Fakat bu ikisini de kullanmamız gerekiyorsa bu durumda şunu yaparız
+
+import java.util.Date date = new Date();
+bu şekilde tanımlamalar ile sorun ortadan kalkar
+
+
+--- javac jar java on commandline ---
+
+yaptığımız örnekler example adlı package'larda kaydedilmektedir
+
+ *example1*
+1-javac HelloWorld.java ile compile ediyoruz
+2-java HelloWorld.java ile de çalıştırdım ( Hoca yazarken .java uzantısı koymuyordu fakat bende olmuyor)
+
+Derlediğimiz zaman bize verilen .class dosyası default olarak derlediğimiz .java ile aynı klasörde yer alır
+Bunu farklı bir klasöre kaydetmek için example2'ye bak
+
+ *example2*
+
+1- javac ile compile ederken -d bin src/HelloWorld.java
+ile .class dosyasını bin'e kaydedebiliriz
+
+burada src'de derlemek istediğimiz .java uzantısının birebir path'ini bin'e kaydediyor
+
+( Javac konusunda bir hata var araştır)
+
+ *example3*
+ bu örnekte derleme sırasında nasıl property oluşturabiliriz ve bunu nasıl kullanılırız bunu göreceğiz
+
+ 1-Her zaman ki gibi javac ile derleme işlemini tamamlıyoruz
+ 2-java -DmyProp="Test prop" .\HelloWorld.java
+ bu komut ile de prop verebiliyoruz. burada önemli ve unutmaman gereken şey
+ -DmyProp="Test prop" -D myProp yazma -DmyProp yaz
+
+ *example4*
+ Bu örnekte CommandLineArgs kullanımını göreceğiz
+
+ 1-javac ile derleme yap
+ 2-java HelloWorld.java arg1 arg2 "arg3 ve arg4" gibi bir kullanımda argümanları vermiş oluruz
+
+ *example5*
+Bu örnekte child ve parent class için child class'i compile ettiğimzde parent class'ın da compile olduğunu görmek
+
+1-javac Dog.java
+ile derleme yapınca parent class'ı  olan animal class'ı da derlediğini göreceğiz
+
+fakat bende derlemedi !!!
+
+ *example6*
+
+ Burada derleme esnasında kullanması gereken / ihtiyacı olan dosyaları nerede bulabileceğini göstericez
+ burada da hata aldım classpath'de bir sorun var anlayamadım
+
+ javac -cp src src/child/Dog.java ile derleyebilirsin
+
+
+
+
+

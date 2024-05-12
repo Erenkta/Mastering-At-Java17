@@ -1,0 +1,37 @@
+--- Temel yapı ---
+
+javac => Java dosyalarını .class dosyalarına convert etmektedir. Bir java dosyasını çalıştırmadan önce
+derlemeye ihtiyaç duyulur.Bunu da javac yapar
+java => programı execute eder
+jar => jar uzantılı paket dosyaları oluşturur
+javadoc => java document dediğimiz özel dökümantasyon yapısını oluşturur.
+
+javac önce instructionları oluşturur. Daha sonrasında JVM koddan önce çalışır.
+JVM bytecode'u makine koduna çevirir.
+
+!! Java 8 - 11 - 17 Major versiyonlardır
+
+
+--- Basic Class Structure ---
+
+building blocks olarak => Class'lar Interface'ler Enum'lar ve Record'lar sayılabilir
+
+Javada temel 2 sınıf üyesi bulunur => Methodlar ve Fieldlar
+
+/**  İki tane yıldız varsa bu Javadoc yorum satırıdır
+*
+*/
+
+Top level type dediğimiz bir yapı mevcut. Eğer bir data structure kendi .java dosyasına sahipse
+buna top level type diyoruz. Mesela animal class'ımız var ve bu class Animal.java içindeyse biz buna
+top level type deriz.
+
+ve java bunun gibi top level type dosyalar için public yazmanı zorunlu kılmaz :
+public class animal {} = class animal{} gibi
+
+! Bir kaynak dosyada birden fazla class tanımlayabiliriz. Burada önemli olan nokta
+public yaptığımız sınıfın ismi dosyanın ismi ile eşleşmelidir
+!! hiçbirine public yazmazsan sadece class ...{} diye tanımlarsan da sıkıntı olmaz
+
+
+
