@@ -1,0 +1,40 @@
+Bu kısımda javada data tipleri hakkında konuşacağız.
+Data tipleri javada ikiye ayrılır :
+
+1-Primitive
+2-Reference type
+
+1- Primitive tipler :
+Javada 8 tane primitive tip bulunur
+-boolean (true or false)
+-byte   (8-bit integral value)
+-short  (16-bit integral value)
+-int    (32-bit integral value)
+-long   (64-bit integral value)
+-float  (32-bit floating point value)
+-double (64-bit floating point value)
+-char   (16-bit unicode value)
+
+! varsayılan olarak noktalı sayılar double , tam sayılar ise int kabul edilir
+! short ve char ikisi de 16 bittir fakar short signed iken char unsigned yani negatif değerlere destek vermez
+
+char c = 100 , +100 , 0 gibi kullanımlar sorun çıkarmaz
+
+! Şimdi short ve char ikisi de 16 bit fakat
+short  = 32767 ile -32767 arasında iken
+byte = 0 ile 65535 arasında çünkü negatif desteklemiyor
+
+! ekstra bilgi olarak short ve bytelar genelde birbirine cast edilebilir çünkü data sizeları aynı
+
+Literal = kodumuzda yer alan sayılara denir
+
+günlük hayatımızda sayılar onluk sisteme göre hesaplanır fakat javada :
+Octal (0-7) arası için başına 0 konması yeterlidir = 017 (Octal olarak hesaplanmalıdır) 7'den sonraki sayılar yok
+Hexadecimal (0-9 ve A-F) için ise başına 0X konmalıdır = 0X02A gibi ve case insensitivedir
+Binary (0 ya da 1) için 0B0010101 gibi bu yine case insensitive'dir
+
+literalleri ayırmak için "_" kullanılabilir. Okunabilirliği arttırmak içindir.
+bunu literalin başında , sonunda "." dan hemen önce ve sonra kullanamayız
+
+1________2 de çalışır
+

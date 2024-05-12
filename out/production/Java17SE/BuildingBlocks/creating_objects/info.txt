@@ -12,3 +12,4 @@ Kodumuz birden fazla yerde initialize edilebilir ve biz bunun takbini yapmalıy�
 2.kural = Constructor bu ikisinden sonra çalışır
 
 *Chick class'ında örneği mevcut*
+

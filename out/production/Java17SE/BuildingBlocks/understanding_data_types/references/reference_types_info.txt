@@ -1,0 +1,11 @@
+referens tipleri adı üstünde bir objeyi referans etmekte kullanılır
+
+primitive tiplerin aksine objenin adres bilgisini tutarlar ( bir nevi pointer görevi görür)
+
+String greeting;
+buradaki greeting değişkeni String objesini referans edebilir.
+
+greeting = new String("How are you") yazdığımızda
+burada bir String instance oluşur ve greeting buna point eder
+
+
