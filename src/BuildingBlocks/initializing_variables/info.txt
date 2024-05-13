@@ -1,0 +1,71 @@
+javada 3 tip variables vardır ve bazılarına default olarak initialize değerleri java kendi atar.
+-local -instance -class (static değişkenler olarak da bilinir)
+
+1-Creating Local Variables:
+    -Local değişkenler bir constructorda,initializer blockta ya da methodda tanımlanan değişkenlerdir.
+    -Local değişkenler javada STACK'te tutulur ( önemli ) (stack variable da denir)
+    -Local değişkenler yalnızda final keyword'ünü alabilirler ( private public vb alamazlar )
+
+    !Final keyword'ünün amacı diğer dillerderi "const" değerleri oluşturmaktır.
+    (Şöyle ki yalnızca 1 kez initialize etme hakkımız var)
+
+    final int i = 12; ->doğru
+
+    final int i;
+    i=12; -> Yine doğru çünkü bir kez initialize ettik
+
+    ! Final ile arrayleri kullanırken elemanlarını değiştirebiliriz fakat kendini değiştiremeyiz
+    örnek için main'e bak
+
+    -Local değişkenler'e java default olarak değer atamaz. Yani kullanmak için kendimiz initialize etmeliyiz.
+
+
+-Instance değişkenler field olarak da isimlendirilir.
+-Class değişkeni de sınıf bazlı ve tüm instancelar arasında paylaşılan değişkenlerdir
+
+-Instance ve class değişkenlerini kullanmak için bir initialize etme söz konusu değildir.
+Java varsayılan olarak bir değer ataması yapar.
+
+--- var keyword ---
+
+local variable belirlerken "var" keyword'ünü kullanabiliriz. Bu işlem compiler'ın tipi bulması içindir.
+
+bu özelliğe local variable type inference denir.
+!Önemli olan var'ı sadece local değişkenlerde kullanabiliriz.
+
+!ayrıca var ile belirlediğimiz değişkenin tipi sonradan farklı atanamaz
+
+var sayi = 12;
+sayi = 5;
+sayi = "Hello"; -> hata verir.
+
+! ! !
+    int i
+                =1;
+        var k
+                =1;
+iki kullanım da doğrudur ve çalışır.
+
+var kullanıcaksak kesinlikle initialize edilmeli
+var x; gibi bir kullanım hatalıdır
+
+int a;var b =12; -> bu kullanım doğru iken
+var n = null -> bu kullanım yanlıştır.
+
+!!! Tekrardan var sadece local variable'da kullanılır
+
+public int method(var a , var b){
+return a+b;
+} -> Bunun gibi bir kullanım HATALIDIR ÇÜNKÜ a ve b METHOD VARIABLE'DIR LOCAL VARIABLE DEĞİL
+
+! var null olarak initialize edilemez ama daha sonradan null atanabilir.
+Bu durum var'ın referans tip olmasındandır.
+
+!Dikkat edilmesi gereken son konu ise var bir rezerv kelime değildir FAKAT rezerv bir tiptr. Yani :
+var var = 12;
+int var = 12; -> her iki kullanım da doğru
+
+fakat class ,interface ya da enum ismi olarak kullanılamaz. !!!
+
+
+var string = (String) null; -> doğrudur.

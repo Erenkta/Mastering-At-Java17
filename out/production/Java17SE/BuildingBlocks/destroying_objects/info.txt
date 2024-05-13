@@ -1,0 +1,42 @@
+Garbage collector nedir ?
+Garbage collector , programımızda erişilmeyen objelerin heap'teki belleği temizlemek adına otomatik
+olarak silinme işlemidir.
+
+JVM bunu bizim için otomatik olarak gerçekleştirir.
+Tüm java objeleri ve instance değişkenleri heap'te tutulur.
+
+Peki sahipsiz (erişilemez) dediğimiz bu objeler hemen mi silinmekte ?
+Hayır fakat hangi nesnenin ne zaman artık işe yaramadığını bilmemiz gerekir.
+Bunu bir eşyayı kullanmak gibi düşünebiliriz. Biz bir objeyi alırız kullanırız ve
+sonunda atılacak olarak paketler dışarı koyarız. Gargabe collector'da bu paketi toplar
+fakat bu işlemin anında olacağının garantisi yok.
+
+System.gc() ile çağırabiliriz fakat o an java bizi ignore edebilir.
+Bunu bir suggest olarak çağırabiliyoruz.
+
+JVM nasıl anlıyor ?
+Her bir objeyi gözlemleyerek hangisine ihtiyaç olmadığını belirliyor.
+
+-Bir objenin artık erişilemez olduğunu söylemek için 2 şartttan biri yeterli :
+1-Objenin herhangi bir referansı kalmamalı
+2-Objenin tüm referansları scope dışında kalmalı
+
+!!! Obje vs referans
+
+-Referans dediğimiz yapı pointer olarak düşünülebilir ve amacı Heap'teki bir objeyi referans etmektir.
+!referanslar ismi olan ve objeye erişmek için kullanılan variables'lardır
+
+-Bir referans başka bir referansa atanabilir.
+-Bir methoda yollanabilir ya da methoddan dönebilir
+-Tüm referansların boyutları aynıdır ve tip farketmez. Çünkü hepsinin içeriği bir adres.
+
+-Objeler ise heapte oturur ve bir ismi yoktur.
+-Objelere referanslar hariç erişmemizin bir imkanı yoktur.
+-Obje boyutları birbirinden farklıdır.
+-Bir obje başka bir objeye atanamaz
+-Methodlara yollanamaz ya da methodlar tarafından dönülemez
+-! Garbage collectorlar objeleri toplar referansları değil
+
+* main'de örnekler var *
+
+

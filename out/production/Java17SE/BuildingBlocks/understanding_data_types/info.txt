@@ -50,3 +50,5 @@ int i1,i2,i3 = 3; için ise 3 tanesi de declare edilir fakat sadece s3 initializ
 
 ! Ayrıca virgülle tanım yapabilmek için hepsinin aynı tipte olması gerekir
 int i4 , String s5 ="yes" -> geçerli değildir
+
+! double d1; double d2; derken arada ; olmalı , değil
