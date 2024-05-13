@@ -8,4 +8,36 @@ buradaki greeting değişkeni String objesini referans edebilir.
 greeting = new String("How are you") yazdığımızda
 burada bir String instance oluşur ve greeting buna point eder
 
+ayrıca
+Employee employee = new Employee("Eren","Nokta",25) gibi bir kullanım da referans tip olarak geçer
+çünkü buradaki employee memory'deki bir instance'ın adres bilgisini tutuyor
 
+
+--- Primitive ve Referans tipler arasındaki farklar ---
+1-Bütün primitive tipler lowercase'dir = int double vb...
+referans tipler ise UpperCase ile başlar = String , Animal , Employee vb
+! Bunun bir zorunluluk değil bir standart olduğu unutulmamalı
+
+2-Referans tipler üzerinden method çağrımı yapabiliriz fakat referans tip null olmamalı
+String reference = "hello"
+int len = reference.length(); // referans tip üzerinden String class'ının methodunu çağırdık
+
+3-Referans tiplere null ataması yapılabilir. Bu bir hata vermez
+fakat primitive tiplere null ataması yapamayız
+
+! Eğer kullanacağımız primitive tip'in değerini bilmiyorsak WRAPPER CLASS'ları kullanmalıyız
+mesela :
+int = Integer
+double = Double vb...
+
+değer ataması yaparken ise :
+
+Integer age = Integer.valueOf(1); gibi bir kullanımı vardır String to wrapper
+int primitive = Integer.parseInt("12"); şeklinde de kullanılır String to primitive
+
+!! Primitive tipler hakkında extra bilgi
+Double apple = Double.valueOf("200.99")
+
+System.out.println(apple.byteValue()); -56
+System.out.println(apple.intValue()); 200
+System.out.println(apple.doubleValue()); 200.99

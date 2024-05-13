@@ -1,0 +1,54 @@
+Text bloklar = " " " şeklinde tanımlanırlar. Kullanımı main'de mevcut
+
+! Ayrıca solda kalan whitespace'ler = zorunlu (essentials)
+  sağda kalanlar ise zorunlu değildir
+
+
+  * textblock içindeki karakterler ve anlamları *
+
+ \s = two space
+ \ = sonda kullanırsak bir alt satıra geçmeyi iptal eder.
+
+String doe = """ doe """ -> derleme hatasına yol açar
+çünkü text blocklardan sonra linebreak kullanımalı
+
+!ayrıca """ 'da bir satır işgal eder fakat boş olarak gözükür yani
+"""
+    eren""" => 1 satırdan oluşurken
+
+"""
+    eren => iki satırdan oluşur
+    """
+
+!Son olarak boşluklar en soldaki karaktere göre belirlenir. Buna sondaki """ dahildir.
+
+
+
+
+--- Identifiers ---
+
+! identifiers'lar rakam ile başlamamalı ( para birimi ve _ ile başlayabilir)
+! String _ = "deneme" gibi bir tanımlama hata verir
+! Javada rezerve olan kelimeleri kullanamayız
+! const ve goto rezerve kelimeler olmamasına karşın java'da kullanılmaz
+! Genelde snake case (_) kullanılacağı zaman karakterlerin hepsi büyük olur (NUMBER_FLAGS) vb
+! int               sayi= 12 -> doğrudur
+! int £$$ß€ = 12 -> aynı şekilde doğrudur (Unicode karakterleri destekler)
+! : - ; # . gibileri desteklemez
+! int ______________Sayi = 12 -> doğru
+! Sınıf isimleri Uppercase ( Animal ) fakat (animal de çalışır ama standarta aykırı)
+
+!!!
+değişken tanımlaması yaparken
+
+String s1,s2;
+String s3="yes", s4="no";
+
+Burada 4 tanesi declare edildi fakat s3 ve s4 initialize edildi
+
+int i1,i2,i3 = 3; için ise 3 tanesi de declare edilir fakat sadece s3 initialize edildi;
+
+! Ayrıca virgülle tanım yapabilmek için hepsinin aynı tipte olması gerekir
+int i4 , String s5 ="yes" -> geçerli değildir
+
+! double d1; double d2; derken arada ; olmalı , değil
