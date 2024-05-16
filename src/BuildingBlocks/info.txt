@@ -34,4 +34,17 @@ public yaptığımız sınıfın ismi dosyanın ismi ile eşleşmelidir
 !! hiçbirine public yazmazsan sadece class ...{} diye tanımlarsan da sıkıntı olmaz
 
 
+----------------------------------------------------------------------------------------------------------
+Review Questionlardan sonra unutmaman gerekenler :
 
+1-""" """ içindeki her şey bir texttir mesela """ "ahmet'in yasi" + age """ çıktısı = "ahmet'in yasi" + age
+2-var'a başlangıç değerini null atamak için bir type'a cast etmeliyiz = var spring = (String) null gibi --- var spring = null yanlış
+3-var day = 1/0 => compile edilir. 1/0 compile'a engel değildir
+4-Java.lang paketi otomatik olarak import edilir. Tekrar import etmek gereksizdir.
+5-Aynı paketteki classları import etmeden kullanabiliriz.
+6-int a=2,b,c; gibi bir kullanım yapılabilir
+7-importlarda class ismi yazmak *'a göre önceliklidir. Eğer iki tane aynı isimde class import edilecekse biri için * biri için classname kullanılmalı yoksa çalışmaz
+8-Garbage collection schedule'a göre çalışmaz
+9-Static variable ile aynı classtaysak direkt ismiyle çağır
+10-var instance değişken olarak kullanılamaz.
+11-parse methodu primitive dönerken valueOf methodu wrapper döner
